@@ -22,6 +22,11 @@ app.get("/", async (req, res) => {
   res.send(user);
 });
 
+app.post("/", async (req, res) => {
+  const user = await Users.create(req.body);
+  res.send(user);
+});
+
 app.listen(4000, () => {
   console.log("App is running on POST NO 4000");
 });
