@@ -22,12 +22,6 @@ app.get("/", async (req, res) => {
   res.send(user);
 });
 
-app.get("/:id", async (req, res) => {
-  const reqId = req.params.id;
-  const user = await Users.findById({ _id: reqId });
-  res.send(user);
-});
-
 app.listen(4000, () => {
   console.log("App is running on POST NO 4000");
 });
